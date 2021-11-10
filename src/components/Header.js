@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Header = (props) => {
     return (
         <nav className="nav">
-            <Link to="/cheeses">
+            <Link to="/">
                 <div>CHEESE APP</div>
             </Link>
         </nav>
