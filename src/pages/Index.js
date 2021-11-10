@@ -20,15 +20,18 @@ const Index = (props) => {
     };
 
     const loaded = () => {
-        return props.cheese.map((cheese) => (
-            <div key={cheese._id} className="cheese">
-                <Link to={`/cheeses/${cheese._id}`}>
-                    <h1>{cheese.name}</h1>
-                </Link>
-                <h3>{cheese.countryOfOrigin}</h3>
-                <img src={cheese.image} alt={cheese.name} />
-            </div>
-        ));
+        return <section className="container">{
+            props.cheese.map((cheese) => {
+                return <div key={cheese._id} className="cheese">
+                    <Link to={`/cheeses/${cheese._id}`}>
+                        <h3>{cheese.name}</h3>
+                    </Link>
+                    <h4>{cheese.countryOfOrigin}</h4>
+                    <img src={cheese.image} alt={cheese.name} />
+                </div>
+    })
+        }
+            </section>
     };
     const loading = () => {
         return <h1>Loading... Please Wait.</h1>
@@ -59,7 +62,7 @@ const Index = (props) => {
                 />
                 <input type="submit" value="ADD"/>
             </form>
-            {props.cheese ? loaded() : loading()};
+            {props.cheese ? loaded() : loading()}
         </section>
 )    
 };

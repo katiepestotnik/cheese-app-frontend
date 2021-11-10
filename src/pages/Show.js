@@ -23,7 +23,6 @@ function Show(props) {
             <h1>{cheese.name}</h1>
             <h3>{cheese.countryOfOrigin}</h3>
         <img src={cheese.image} alt={cheese.name} />
-        <button onClick={removeCheese}>DELETE</button>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -31,26 +30,26 @@ function Show(props) {
             value={editCheese.name}
             placeholder="name"
             onChange={handleChange}
-          />
+          /><br/>
           <input
             type="text"
             name="countryOfOrigin"
             value={editCheese.countryOfOrigin}
             placeholder="Country of Origin"
-            onChange={handleChange} />
+            onChange={handleChange} /><br/>
           <input
             type="text"
             name="image"
             value={editCheese.image}
             placeholder="Image URL"
             onChange={handleChange}
-          />
+          /><br/>
           <input
             type="submit"
-            value="SUBMIT"
+            value="UPDATE CHEESE"
           />
-        </form>
-
+        </form><br/>
+        <button onClick={removeCheese}>DELETE CHEESE</button>
       </div>
     )
   }
