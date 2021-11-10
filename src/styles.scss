@@ -1,0 +1,28 @@
+//Variables
+
+$maincolor: #f77100;
+$countrastcolor: #ffcca2;
+
+@mixin light-text-dark-bg {
+    color: $countrastcolor;
+    background-color: $maincolor;
+}
+nav{
+    @include light-text-dark-bg;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+a {
+    @include light-text-dark-bg;
+    font-size: 45px;
+    text-decoration: none;
+}
+body{
+    @include light-text-dark-bg;
+    font-size: 50px;
+}
+img {
+    width:40%;
+    height: auto;
+}
